@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>COVID Tracker</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src="app.js"></script>
+    <title>COVID Tracker</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="app.js"></script>
 
 </head>
+
 <body>
-	<h1 class="title">COVID-19 Tracker</h1>
-	<h2 class="subtitle">The latest statistics regarding the "Corona Virus".</h2>
-	<div class="data-container">
-	    <h2>World</h2>
-		<div class="stats-container">
-			<h4>Cases</h4>
-			<h1 id="cases"></h1>
-			<h4>Deaths</h4>
-			<h1 id="deaths"></h1>
-			<h4>% of Deaths</h4>
-			<h1 id="percent"></h1>
-		</div>
-		<div class="location-container">
-			<h4>Country</h4>
-			<h1 id="country">United States</h1>
-			<h4>Population</h4>
-			<h1 id="population"></h1>
-			<h4>Last Updated</h4>
-			<h1 id="update"></h1>
-		</div>
-	</div>
+    <h1 class="title">COVID-19 Tracker</h1>
+    <h2 class="subtitle">The latest statistics regarding the "Corona Virus".</h2>
+    <div class="data-container">
+        <h2>World</h2>
+        <div class="stats-container">
+            <h4>Cases</h4>
+            <h1 id="cases"></h1>
+            <h4>Deaths</h4>
+            <h1 id="deaths"></h1>
+            <h4>% of Deaths</h4>
+            <h1 id="percent"></h1>
+        </div>
+        <div class="location-container">
+            <h4>Country</h4>
+            <h1 id="country">United States</h1>
+            <h4>Population</h4>
+            <h1 id="population"></h1>
+            <h4>Last Updated</h4>
+            <h1 id="update"></h1>
+        </div>
+
+        <!--Chatbot Script-->
+        <script type="text/javascript">
+            /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+            (function(d, m) {
+                var kommunicateSettings = {
+                    "appId": "233bd45d08e21830167f3c8c53313aa1",
+                    "popupWidget": true,
+                    "automaticChatOpenOnNavigation": true
+                };
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+                var h = document.getElementsByTagName("head")[0];
+                h.appendChild(s);
+                window.kommunicate = m;
+                m._globals = kommunicateSettings;
+            })(document, window.kommunicate || {});
+        </script>
 </body>
+
 </html>
